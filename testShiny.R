@@ -32,3 +32,5 @@ server<-function(input,output){
 }
 
 shinyApp(ui=ui,server = server)
+
+https://mleblanc.shinyapps.io/entrainement/
