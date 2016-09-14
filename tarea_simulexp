@@ -1,6 +1,6 @@
 
 
-#El link shinyapps.io: https://mleblanc.shinyapps.io/tarea_simulexp/
+El link shinyapps.io: https://mleblanc.shinyapps.io/tarea_simulexp/
 
 
 library(shiny)
