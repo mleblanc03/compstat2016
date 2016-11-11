@@ -30,13 +30,17 @@ shinyUI(fluidPage(
         ),
         
         sliderInput("a", "a", min=-1000, max=1000, value=0),
-        sliderInput("b", "b", min=-1000, max=1000, value=10),
+        sliderInput("b", "b (cuidado a>=b)", min=-1000, max=1000, value=10),
         numericInput("nsim", "Numero de simulaciones", value=100), 
         sliderInput("alpha","alpha",min=0,max=1,value=0.05),
         
         textOutput("resultat1"),
         
-        textOutput("resultat2")
+        textOutput("resultat2"),
+        
+        textOutput("Title"),
+        
+        plotOutput(("graphica"))
         
     )
    )
