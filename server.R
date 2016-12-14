@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
   p<-plot_ly(x=data_tarea1(),type="histogram",opacity=0.3,
              main="Comparacion entre nuestra simulacion y la funcion rexp")%>% add_trace(x=xtest_tarea1(),
                                                                                          type="histogram",
-                                                                                         opacity=0.3)%>% layout(title = "Comparacion entre el histograma de nuestra simulacion(Azul) y Rexp(Naranja)", 
+                                                                                         opacity=0.3)%>% layout(title = "Comparacion entre la histograma de nuestra simulacion(Azul) y Rexp(Naranja)", 
                                                                                                                 scene = list(
                                                                                                                 xaxis = list(title = "x"))) 
                                                                                                                  
@@ -66,7 +66,7 @@ shinyServer(function(input, output) {
   output$resultat_1 <- renderText({text1()})
   output$resultat_2<-renderText({text2()})
   
-  output$Title<-renderText({"Resultados para N_simulaciones:"})
+  output$Title<-renderText({"Resultados para N_simulaciones (echelle logarithme base=10):"})
   
   
   
@@ -187,9 +187,9 @@ shinyServer(function(input, output) {
   output$text_tarea5_b<-renderText({text_tarea5_b()})
   output$text_tarea5_c<-renderText({text_tarea5_c()})
   
-  output$hist_aplha<-renderPlot({hist(m()[,1],xlab="alpha",main="histogramme de alpha")})
-  output$hist_beta<-renderPlot({hist(m()[,2],xlab="beta",main="histogramme de beta")})
-  output$hist_sigma2<-renderPlot({hist(m()[,3],xlab="sigma_2",main="histogramme de sigma_2")})
+  output$hist_aplha<-renderPlot({hist(m()[,1],xlab="alpha",main="Histograma de alpha")})
+  output$hist_beta<-renderPlot({hist(m()[,2],xlab="beta",main="Histograma de beta")})
+  output$hist_sigma2<-renderPlot({hist(m()[,3],xlab="sigma_2",main="Histograma de sigma_2")})
   
   choice<-reactive({input$graph_density})
   #output$comparar<-renderPlot({if (choice()=="alpha"){par(mfrow=c(2,2))

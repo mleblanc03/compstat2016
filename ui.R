@@ -29,7 +29,7 @@ shinyUI(fluidPage(
       
       tabPanel(title="Tarea2",
                h2("Integracion Monte Carlo"),
-               h3("Integration de la funcion g en [a,b]"),
+               h3("Integracion de la funcion g en [a,b]"),
                
                textInput(
                  inputId="expresion1", 
@@ -38,7 +38,7 @@ shinyUI(fluidPage(
                ),
                
                sliderInput("a", "a", min=-1000, max=1000, value=0),
-               sliderInput("b", "b (cuidado a>=b)", min=-1000, max=1000, value=10),
+               sliderInput("b", "b (cuidado a<=b)", min=-1000, max=1000, value=10),
                numericInput("nsim", "Numero de simulaciones", value=1000), 
                sliderInput("alpha","alpha",min=0,max=1,value=0.05),
                
@@ -71,6 +71,7 @@ shinyUI(fluidPage(
  
     tabPanel(title="Preparacion de los distribuciones inciales",
              titlePanel("Normal para (alpha,beta) y Gamma para sigma2"),
+             h3("Y ~ N( alpha+beta*X ; sigma2 )"),
              numericInput("mean_a","mean_a",value=0),
              numericInput("sd_a","sd_a",value=100,min=0.0001),
              numericInput("mean_b","mean_b",value=0),
@@ -100,7 +101,7 @@ shinyUI(fluidPage(
              plotOutput("hist_aplha"),
              plotOutput("hist_beta"),
              plotOutput("hist_sigma2"),
-             selectInput("graph_density","Elige su comparacion de densidad (la cts de normalizacion no es conocido decidi de dividir por max(dens$y)) ",choices=c("alpha","beta","sigma_2")),
+             selectInput("graph_density","Elige su comparacion de densidad (la cts de normalizacion de la post no es conocida pues decidi de dividir por max(dens$y)) ",choices=c("alpha","beta","sigma_2")),
              plotOutput("comparar")
              
       )
